@@ -1,0 +1,43 @@
+// Layout: contains all styles involved with the layout of your project. Such as styles for your header, footer, navigation and the grid sys
+body {
+    background-image: url('photos/background1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    @include flex(unset, center, center);
+    .todoList {
+        padding: 2rem 4rem;
+        &_header {
+            @include flex(column, center, center);
+            &-title {
+                font-size:6.5rem;
+                font-weight: 400;
+            }
+            &-subtitle {
+                font-size: 2.5rem;
+                font-weight: 300;
+                margin-bottom: 2rem;
+            }
+        }
+        form {
+            @include flex(row, center, center);
+            .addAction {
+                input {
+                    height: 3rem;
+
+                    &:placeholder-shown {
+                        font-style: italic;
+                        margin-bottom: 1.5rem;
+                    }
+                    &:enabled {
+                        outline: 0px solid transparent;
+                        border-radius: 2rem;
+                    }
+                }
+            }
+        }
+        background: $color-basic;
+        border-radius: 20%;
+        box-shadow: 0 10px 16px 0 white, 0 6px 20px 0 white ;
+    }
+}

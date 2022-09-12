@@ -1,0 +1,21 @@
+// Base: contained within this file are all your resets, variables, mixins, and any utility classes.
+$color-basic: #6CE8C4;
+$text-color: #FEF2F2;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+@mixin flex($flex-directions,$justify-content, $align-items) {
+    display: flex;
+    flex-direction: $flex-directions;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}

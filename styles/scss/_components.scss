@@ -1,0 +1,31 @@
+// Components (or modules): holds all of your styles for buttons, carousels, sliders, and similar page components (think widgets). Your project will typically contain a lot of component files — as the whole site/app should be mostly composed of small modules.
+.addMemorial {
+    @include flex(column, center, center);
+    gap: 7px;
+    li {
+        @include flex(row, space-between, center);
+        width: 28rem;
+        max-width: 28rem;
+        border: 1px solid black;
+        div:first-of-type {
+            font-size: 2rem;
+            font-weight: 300;
+            margin-right: 1rem;
+            [contenteditable]:focus {
+                outline: 0px solid transparent;
+            } 
+        }
+        div:nth-of-type(2) {
+            justify-self: end;
+            @include flex(row, center, center);
+            gap: 5px;
+            img {
+                border: 1px solid black;
+                width: 2rem;
+                height: 2rem;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+    }
+}
